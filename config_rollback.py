@@ -1,0 +1,18 @@
+"""
+Source Document : Junos PyEZ Developer Guide
+Source Section  : Use the Junos PyEZ Config Utility to Configure Junos Devices > Roll Back the Configuration
+Source URL      : https://www.juniper.net/documentation/us/en/software/junos-pyez/junos-pyez-developer/topics/task/junos-pyez-program-configuration-data-loading.html
+"""
+
+from jnpr.junos import Device
+from jnpr.junos.utils.config import Config
+
+
+rollback_id = int(input('Rollback ID of the configuration to restore: '))
+
+
+with Device(host='dc1a.example.com') as dev:
+    with Config(dev, mode='exclusive') as cu:
+        cu.rollback(rb_id=rollback_id)
+        cu.pdiff()
+        cu.commit()
