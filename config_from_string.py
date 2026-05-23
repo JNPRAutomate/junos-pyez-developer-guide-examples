@@ -11,8 +11,7 @@ from jnpr.junos.utils.config import Config
 dev = Device(host='dc1a.example.com').open()
 cu = Config(dev)
 
-
-# For configuration data formatted as ASCII text:
+# For configuration formatted as text
 config_text = """
 system {
     scripts {
@@ -24,32 +23,29 @@ system {
 """
 cu.load(config_text, format='text', merge=True)
 
-
-# For configuration data formatted as Junos XML:
+# For configuration formatted as xml
 config_xml = """
 <configuration>
-    <system>
-        <scripts>
-             <op>
-                  <file>
-                      <name>test.slax</name>
-                 </file>
-            </op>
-        </scripts>
-    </system>
+      <system>
+          <scripts>
+               <op>
+                    <file>
+                        <name>test.slax</name>
+                   </file>
+              </op>
+          </scripts>
+      </system>
 </configuration>
 """
 cu.load(config_xml, format='xml', merge=True)
 
-
-# For configuration data formatted as Junos OS set commands:
+# For configuration formatted as text with set action
 config_set = """
 set system scripts op file test.slax
 """
 cu.load(config_set, format='set', merge=True)
 
-
-# For configuration data formatted using JSON:
+# For configuration data formatted using json
 config_json = """{
     "configuration" : {
         "system" : {
