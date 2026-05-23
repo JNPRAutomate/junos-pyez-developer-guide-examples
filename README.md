@@ -4,9 +4,9 @@ Complete Python scripts extracted from the **Junos PyEZ Developer Guide**.
 
 ## Content and Source Information
 
-**Content:** About 86 scripts for your scripting enjoyment!
-**Source Document:** [Junos® OS Junos PyEZ Developer Guide](junos-pyez-developer.pdf) from Juniper Networks, Inc.
-**Online:** <https://www.juniper.net/documentation/us/en/software/junos-pyez/junos-pyez-developer/index.html>
+**Content:** About 86 scripts for your scripting enjoyment!  
+**Source Document:** [Junos® OS Junos PyEZ Developer Guide](junos-pyez-developer.pdf) from Juniper Networks, Inc. published on 2026-02-04  
+**Online:** <https://www.juniper.net/documentation/us/en/software/junos-pyez/junos-pyez-developer/index.html>  
 
 ### Connect to Junos Devices Using Junos PyEZ
 
